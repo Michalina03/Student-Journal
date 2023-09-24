@@ -26,6 +26,10 @@
         public abstract void AddGrade(string grade);
 
 
-        public abstract Statistics GetStatistic();
+        public abstract Statistics GetStatistic1();
+        public abstract Statistics GetStatistic2();
+        public abstract  Statistics GetStatistic3();
+        public abstract Statistics GetStatistic4();
+        public abstract  Statistics GetStatistic5();
     }
 }

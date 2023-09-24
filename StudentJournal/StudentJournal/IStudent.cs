@@ -11,6 +11,10 @@ namespace StudentJournal
         void AddGrade(float grade);
         void AddGrade(char grade);
         void AddGrade(string grade);
-        Statistics GetStatistic();
+        Statistics GetStatistic1();
+        Statistics GetStatistic2();
+        Statistics GetStatistic3();
+        Statistics GetStatistic4();
+        Statistics GetStatistic5();
     }
 }
