@@ -1,5 +1,4 @@
-﻿using static StudentJournal.StudentBase;
-namespace StudentJournal
+﻿namespace StudentJournal
 {
     public interface IStudent
     {

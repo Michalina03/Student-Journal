@@ -2,7 +2,7 @@
 {
     public abstract class StudentBase : IStudent
     {
-        
+
         public StudentBase(string name, string surname, string age)
         {
             this.Name = name;
@@ -36,5 +36,5 @@
         public abstract Statistics GetStatisticsPhysics();
 
     }
-    
+
 }
