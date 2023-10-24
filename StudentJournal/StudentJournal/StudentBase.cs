@@ -13,11 +13,11 @@
         public string Surname { get; private set; }
         public string Age { get; private set; }
 
-        public abstract void AddGradeMath(float grade);
-        public abstract void AddGradePolish(float grade);
-        public abstract void AddGradeEnglish(float grade);
-        public abstract void AddGradeIT(float grade);
-        public abstract void AddGradePhysics(float grade);
+        public abstract void AddGradeMath(int grade);
+        public abstract void AddGradePolish(int grade);
+        public abstract void AddGradeEnglish(int grade);
+        public abstract void AddGradeIT(int grade);
+        public abstract void AddGradePhysics(int grade);
         public abstract void AddGradeMath(string grade);
         public abstract void AddGradePolish(string grade);
         public abstract void AddGradeEnglish(string grade);

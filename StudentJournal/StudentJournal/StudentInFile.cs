@@ -14,7 +14,7 @@
 
         }
 
-        public override void AddGradeMath(float grade)
+        public override void AddGradeMath(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -32,7 +32,7 @@
 
         public override void AddGradeMath(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if (int.TryParse(grade, out int result))
             {
                 this.AddGradeMath(result);
             }
@@ -76,7 +76,7 @@
                     throw new Exception("Wrong Letter");
             }
         }
-        public override void AddGradePolish(float grade)
+        public override void AddGradePolish(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -93,7 +93,7 @@
 
         public override void AddGradePolish(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if (int.TryParse(grade, out int result))
             {
                 this.AddGradePolish(result);
             }
@@ -137,7 +137,7 @@
                     throw new Exception("Wrong Letter");
             }
         }
-        public override void AddGradeEnglish(float grade)
+        public override void AddGradeEnglish(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -154,7 +154,7 @@
 
         public override void AddGradeEnglish(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if (int.TryParse(grade, out int result))
             {
                 this.AddGradeEnglish(result);
             }
@@ -199,7 +199,7 @@
             }
         }
 
-        public override void AddGradeIT(float grade)
+        public override void AddGradeIT(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -216,7 +216,7 @@
 
         public override void AddGradeIT(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if (int.TryParse(grade, out int result))
             {
                 this.AddGradeIT(result);
             }
@@ -261,7 +261,7 @@
             }
         }
 
-        public override void AddGradePhysics(float grade)
+        public override void AddGradePhysics(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -278,7 +278,7 @@
 
         public override void AddGradePhysics(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if (int.TryParse(grade, out int result))
             {
                 this.AddGradePhysics(result);
             }

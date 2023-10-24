@@ -2,18 +2,10 @@
 
 Console.WriteLine("Welcome to the student's journal !");
 Console.WriteLine("============================");
+Console.WriteLine("Save your grades on a list:");
 Console.WriteLine();
 Console.WriteLine("Submit your math grades:");
-var math = new StudentInFile("Kasia", "Nowak", "15");
-math.AddGradePhysics(5);
-var math2 = new StudentInFile("Kasia", "Nowak", "15");
-math2.AddGradeEnglish(5);
-var math3 = new StudentInFile("Kasia", "Nowak", "15");
-math3.AddGradePolish(5);
-var math4 = new StudentInFile("Kasia", "Nowak", "15");
-math4.AddGradeIT(5);
-var math5 = new StudentInFile("Kasia", "Nowak", "15");
-math5.AddGradePhysics(5);
+var math = new StudentInMemory("Kasia", "Nowak", "15");
 while (true)
 {
     var inputMath = Console.ReadLine();
@@ -127,3 +119,126 @@ var statisticsPhysics = physics.GetStatisticsIT();
 Console.WriteLine(statisticsPhysics.Average);
 Console.WriteLine(statisticsPhysics.Min);
 Console.WriteLine(statisticsPhysics.Max);
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Welcome to the student's journal !");
+Console.WriteLine("============================");
+Console.WriteLine("Save your grades on a list:");
+Console.WriteLine();
+Console.WriteLine("Submit your math grades:");
+var math2 = new StudentInFile("Kasia", "Nowak", "15");
+while (true)
+{
+    var inputMath2 = Console.ReadLine();
+    if (inputMath2 == "q")
+    {
+        break;
+    }
+
+    try
+    {
+        math2.AddGradeMath(inputMath2);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catch {e.Message}");
+    }
+}
+var statisticsMath2 = math2.GetStatisticsMath();
+Console.WriteLine(statisticsMath2.Average);
+Console.WriteLine(statisticsMath2.Min);
+Console.WriteLine(statisticsMath2.Max);
+Console.WriteLine();
+Console.WriteLine("Submit your polish grades:");
+var polish2 = new StudentInFile("Kasia", "Nowak", "15");
+while (true)
+{
+    var inputPolish2 = Console.ReadLine();
+    if (inputPolish2 == "q")
+    {
+        break;
+    }
+    try
+    {
+        polish2.AddGradePolish(inputPolish2);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catch {e.Message}");
+    }
+}
+var statisticsPolish2 = polish2.GetStatisticsPolish();
+Console.WriteLine(statisticsPolish2.Average);
+Console.WriteLine(statisticsPolish2.Min);
+Console.WriteLine(statisticsPolish2.Max);
+Console.WriteLine();
+Console.WriteLine("Submit your english grades:");
+var english2 = new StudentInMemory("Kasia", "Nowak", "15");
+while (true)
+{
+    var inputEnglish2 = Console.ReadLine();
+    if (inputEnglish2 == "q")
+    {
+        break;
+    }
+    try
+    {
+        english2.AddGradeEnglish(inputEnglish2);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catch {e.Message}");
+    }
+}
+var statisticsEnglish2 = english2.GetStatisticsEnglish();
+Console.WriteLine(statisticsEnglish2.Average);
+Console.WriteLine(statisticsEnglish2.Min);
+Console.WriteLine(statisticsEnglish2.Max);
+Console.WriteLine();
+Console.WriteLine("Submit your grades in IT:");
+var IT2 = new StudentInMemory("Kasia", "Nowak", "15");
+while (true)
+{
+    var inputIT2 = Console.ReadLine();
+    if (inputIT2 == "q")
+    {
+        break;
+    }
+    try
+    {
+        IT2.AddGradeIT(inputIT2);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catch {e.Message}");
+    }
+}
+var statisticsIT2 = IT2.GetStatisticsIT();
+Console.WriteLine(statisticsIT2.Average);
+Console.WriteLine(statisticsIT2.Min);
+Console.WriteLine(statisticsIT2.Max);
+Console.WriteLine();
+Console.WriteLine("Submit your physics grades:");
+var physics2 = new StudentInMemory("Kasia", "Nowak", "15");
+while (true)
+{
+    var inputPhysics2 = Console.ReadLine();
+    if (inputPhysics2 == "q")
+    {
+        break;
+    }
+    try
+    {
+        physics.AddGradePhysics(inputPhysics2);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catch {e.Message}");
+    }
+}
+var statisticsPhysics2 = physics2.GetStatisticsIT();
+Console.WriteLine(statisticsPhysics2.Average);
+Console.WriteLine(statisticsPhysics2.Min);
+Console.WriteLine(statisticsPhysics2.Max);
