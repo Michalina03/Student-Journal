@@ -238,7 +238,7 @@ while (true)
         Console.WriteLine($"Exception catch {e.Message}");
     }
 }
-var statisticsPhysics2 = physics2.GetStatisticsIT();
+var statisticsPhysics2 = physics2.GetStatisticsPhysics();
 Console.WriteLine(statisticsPhysics2.Average);
 Console.WriteLine(statisticsPhysics2.Min);
 Console.WriteLine(statisticsPhysics2.Max);

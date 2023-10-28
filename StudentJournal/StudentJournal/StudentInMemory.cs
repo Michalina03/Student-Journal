@@ -12,6 +12,17 @@
         {
 
         }
+        public override void AddGradeMath(double grade)
+        {
+            int result = (int)grade;
+            this.AddGradeMath(result);
+        }
+
+        public override void AddGradeMath(float grade)
+        {
+            int result = (int)grade;
+            this.AddGradeMath(result);
+        }
         public override void AddGradeMath(int gradeMath)
         {
             if (gradeMath >= 1 && gradeMath <= 6)
@@ -20,7 +31,7 @@
             }
             else
             {
-                Console.WriteLine("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradeMath(string gradeMath)
@@ -31,7 +42,7 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("This grade doesn't exist");
             }
 
 
@@ -65,18 +76,29 @@
                     this.gradesMath.Add(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist");
             }
+        }
+        public override void AddGradePolish(double grade)
+        {
+            int result = (int)grade;
+            this.AddGradePolish(result);
+        }
+
+        public override void AddGradePolish(float grade)
+        {
+            int result = (int)grade;
+            this.AddGradePolish(result);
         }
         public override void AddGradePolish(int gradePolish)
         {
-            if (gradePolish > 0 && gradePolish <= 6)
+            if (gradePolish >= 1 && gradePolish <= 6)
             {
                 this.gradesMath.Add(gradePolish);
             }
             else
             {
-                Console.WriteLine("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradePolish(string gradePolish)
@@ -87,7 +109,7 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradePolish(char gradePolish)
@@ -119,18 +141,29 @@
                     this.gradesPolish.Add(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist"); ;
             }
+        }
+        public override void AddGradeEnglish(double grade)
+        {
+            int result = (int)grade;
+            this.AddGradeEnglish(result);
+        }
+
+        public override void AddGradeEnglish(float grade)
+        {
+            int result = (int)grade;
+            this.AddGradeEnglish(result);
         }
         public override void AddGradeEnglish(int gradeEnglish)
         {
-            if (gradeEnglish > 0 && gradeEnglish <= 6)
+            if (gradeEnglish >= 1 && gradeEnglish <= 6)
             {
                 this.gradesMath.Add(gradeEnglish);
             }
             else
             {
-                Console.WriteLine("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradeEnglish(string gradeEnglish)
@@ -141,7 +174,7 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradeEnglish(char gradeEnglish)
@@ -173,18 +206,29 @@
                     this.gradesEnglish.Add(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist");
             }
+        }
+        public override void AddGradeIT(double grade)
+        {
+            int result = (int)grade;
+            this.AddGradeIT(result);
+        }
+
+        public override void AddGradeIT(float grade)
+        {
+            int result = (int)grade;
+            this.AddGradeIT(result);
         }
         public override void AddGradeIT(int gradeIT)
         {
-            if (gradeIT > 0 && gradeIT <= 6)
+            if (gradeIT >= 1 && gradeIT <= 6)
             {
                 this.gradesMath.Add(gradeIT);
             }
             else
             {
-                Console.WriteLine("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradeIT(string gradeIT)
@@ -195,7 +239,7 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradeIT(char gradeIT)
@@ -230,15 +274,26 @@
                     throw new Exception("Wrong Letter");
             }
         }
+        public override void AddGradePhysics(double grade)
+        {
+            int result = (int)grade;
+            this.AddGradePhysics(result);
+        }
+
+        public override void AddGradePhysics(float grade)
+        {
+            int result = (int)grade;
+            this.AddGradePhysics(result);
+        }
         public override void AddGradePhysics(int gradePhysics)
         {
-            if (gradePhysics > 0 && gradePhysics <= 6)
+            if (gradePhysics >= 1 && gradePhysics <= 6)
             {
                 this.gradesPhysics.Add(gradePhysics);
             }
             else
             {
-                Console.WriteLine("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradePhysics(string gradePhysics)
@@ -249,7 +304,7 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("This grade doesn't exist");
             }
         }
         public override void AddGradePhysics(char gradePhysics)
@@ -281,7 +336,7 @@
                     this.gradesPhysics.Add(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist");
             }
         }
 
@@ -301,6 +356,7 @@
 
             statisticsMath.Average /= this.gradesMath.Count;
 
+
             return statisticsMath;
         }
         public override Statistics GetStatisticsPolish()
@@ -319,6 +375,9 @@
             }
 
             statisticsPolish.Average = statisticsPolish.Average / this.gradesPolish.Count;
+
+
+
             return statisticsPolish;
 
         }
@@ -338,6 +397,7 @@
             }
 
             statisticsEnglish.Average = statisticsEnglish.Average / this.gradesEnglish.Count;
+
             return statisticsEnglish;
 
         }
@@ -358,6 +418,7 @@
             }
 
             statisticsIT.Average = statisticsIT.Average / this.gradesIT.Count;
+
             return statisticsIT;
 
         }
@@ -378,6 +439,7 @@
             }
 
             statisticsPhysics.Average = statisticsPhysics.Average / this.gradesPhysics.Count;
+
             return statisticsPhysics;
 
         }

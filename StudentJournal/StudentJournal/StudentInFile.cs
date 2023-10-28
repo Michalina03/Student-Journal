@@ -13,6 +13,21 @@
         {
 
         }
+        public override void AddGradeMath(double grade)
+        {
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
+        }
+
+        public override void AddGradeMath(float grade)
+        {
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
+        }
 
         public override void AddGradeMath(int grade)
         {
@@ -36,7 +51,10 @@
             {
                 this.AddGradeMath(result);
             }
-
+            else if (char.TryParse(grade, out char charResult))
+            {
+                this.AddGradeMath(charResult);
+            }
             else
             {
                 throw new Exception("Invalid string value");
@@ -76,6 +94,22 @@
                     throw new Exception("Wrong Letter");
             }
         }
+
+        public override void AddGradePolish(double grade)
+        {
+            using (var writer = File.AppendText(fileName2))
+            {
+                writer.WriteLine(grade);
+            }
+        }
+
+        public override void AddGradePolish(float grade)
+        {
+            using (var writer = File.AppendText(fileName2))
+            {
+                writer.WriteLine(grade);
+            }
+        }
         public override void AddGradePolish(int grade)
         {
             if (grade >= 1 && grade <= 6)
@@ -97,7 +131,10 @@
             {
                 this.AddGradePolish(result);
             }
-
+            else if (char.TryParse(grade, out char charResult))
+            {
+                this.AddGradePolish(charResult);
+            }
             else
             {
                 throw new Exception("Invalid string value");
@@ -137,6 +174,21 @@
                     throw new Exception("Wrong Letter");
             }
         }
+        public override void AddGradeEnglish(double grade)
+        {
+            using (var writer = File.AppendText(fileName3))
+            {
+                writer.WriteLine(grade);
+            }
+        }
+
+        public override void AddGradeEnglish(float grade)
+        {
+            using (var writer = File.AppendText(fileName3))
+            {
+                writer.WriteLine(grade);
+            }
+        }
         public override void AddGradeEnglish(int grade)
         {
             if (grade >= 1 && grade <= 6)
@@ -158,7 +210,10 @@
             {
                 this.AddGradeEnglish(result);
             }
-
+            else if (char.TryParse(grade, out char charResult))
+            {
+                this.AddGradeEnglish(charResult);
+            }
             else
             {
                 throw new Exception("Invalid string value");
@@ -198,12 +253,26 @@
                     throw new Exception("Wrong Letter");
             }
         }
+        public override void AddGradeIT(double grade)
+        {
+            using (var writer = File.AppendText(fileName4))
+            {
+                writer.WriteLine(grade);
+            }
+        }
 
+        public override void AddGradeIT(float grade)
+        {
+            using (var writer = File.AppendText(fileName4))
+            {
+                writer.WriteLine(grade);
+            }
+        }
         public override void AddGradeIT(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName))
+                using (var writer = File.AppendText(fileName4))
                 {
                     writer.WriteLine(grade);
                 }
@@ -220,7 +289,10 @@
             {
                 this.AddGradeIT(result);
             }
-
+            else if (char.TryParse(grade, out char charResult))
+            {
+                this.AddGradeIT(charResult);
+            }
             else
             {
                 throw new Exception("Invalid string value");
@@ -260,19 +332,34 @@
                     throw new Exception("Wrong Letter");
             }
         }
+        public override void AddGradePhysics(double grade)
+        {
+            using (var writer = File.AppendText(fileName5))
+            {
+                writer.WriteLine(grade);
+            }
+        }
+
+        public override void AddGradePhysics(float grade)
+        {
+            using (var writer = File.AppendText(fileName5))
+            {
+                writer.WriteLine(grade);
+            }
+        }
 
         public override void AddGradePhysics(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName))
+                using (var writer = File.AppendText(fileName5))
                 {
                     writer.WriteLine(grade);
                 }
             }
             else
             {
-                throw new Exception("Invalid grade value");
+                throw new Exception("This grade doesn't exist");
             }
         }
 
@@ -282,7 +369,10 @@
             {
                 this.AddGradePhysics(result);
             }
-
+            else if (char.TryParse(grade, out char charResult))
+            {
+                this.AddGradePhysics(charResult);
+            }
             else
             {
                 throw new Exception("Invalid string value");
@@ -322,46 +412,46 @@
                     throw new Exception("Wrong Letter");
             }
         }
-
         public override Statistics GetStatisticsMath()
         {
-            Statistics stats = new Statistics();
-            stats.Min = float.MaxValue;
-            stats.Max = float.MinValue;
-            stats.Average = 0;
-            if (File.Exists(fileName))
             {
-                using (var reader = File.OpenText(fileName))
+                Statistics stats = new Statistics();
+                stats.Min = float.MaxValue;
+                stats.Max = float.MinValue;
+                stats.Average = 0;
+                if (File.Exists(fileName2))
                 {
-                    int i = 0;
-                    var line = reader.ReadLine();
-                    while (line != null)
+                    using (var reader = File.OpenText(fileName2))
                     {
-                        i++;
-                        float point = float.Parse(line);
-                        stats.Min = Math.Min(stats.Min, point);
-                        stats.Max = Math.Max(stats.Max, point);
-                        stats.Average += point;
+                        int i = 0;
+                        var line = reader.ReadLine();
+                        while (line != null)
+                        {
+                            i++;
+                            float point = float.Parse(line);
+                            stats.Min = Math.Min(stats.Min, point);
+                            stats.Max = Math.Max(stats.Max, point);
+                            stats.Average += point;
 
-                        line = reader.ReadLine();
-                    }
-                    if (i > 0)
-                    {
-                        stats.Average /= i;
-                    }
-                    else
-                    {
-                        stats.Min = 0;
-                        stats.Max = 0;
-                        stats.Average = 0;
+                            line = reader.ReadLine();
+                        }
+                        if (i > 0)
+                        {
+                            stats.Average /= i;
+                        }
+                        else
+                        {
+                            stats.Min = 0;
+                            stats.Max = 0;
+                            stats.Average = 0;
+                        }
+
                     }
 
                 }
-
+                return stats;
             }
-            return stats;
         }
-
         public override Statistics GetStatisticsPolish()
         {
             {
