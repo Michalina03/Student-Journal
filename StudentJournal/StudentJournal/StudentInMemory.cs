@@ -100,7 +100,7 @@ namespace StudentJournal
         {
             if (gradePolish >= 1 && gradePolish <= 6)
             {
-                this.gradesMath.Add(gradePolish);
+                this.gradesPolish.Add(gradePolish);
             }
             else
             {
@@ -169,7 +169,7 @@ namespace StudentJournal
         {
             if (gradeEnglish >= 1 && gradeEnglish <= 6)
             {
-                this.gradesMath.Add(gradeEnglish);
+                this.gradesEnglish.Add(gradeEnglish);
             }
             else
             {
@@ -238,7 +238,7 @@ namespace StudentJournal
         {
             if (gradeIT >= 1 && gradeIT <= 6)
             {
-                this.gradesMath.Add(gradeIT);
+                this.gradesIT.Add(gradeIT);
             }
             else
             {
