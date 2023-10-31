@@ -24,9 +24,9 @@ while (true)
     }
 }
 var statisticsMath = math.GetStatisticsMath();
-Console.WriteLine(statisticsMath.Average);
-Console.WriteLine(statisticsMath.Min);
-Console.WriteLine(statisticsMath.Max);
+Console.WriteLine($"Average:{statisticsMath.Average}");
+Console.WriteLine($"Min:{statisticsMath.Min}");
+Console.WriteLine($"Max:{statisticsMath.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your polish grades:");
 var polish = new StudentInMemory("Kasia", "Nowak", "15");
@@ -47,9 +47,9 @@ while (true)
     }
 }
 var statisticsPolish = polish.GetStatisticsPolish();
-Console.WriteLine(statisticsPolish.Average);
-Console.WriteLine(statisticsPolish.Min);
-Console.WriteLine(statisticsPolish.Max);
+Console.WriteLine($"Average:{statisticsPolish.Average}");
+Console.WriteLine($"Min:{statisticsPolish.Min}");
+Console.WriteLine($"Max:{statisticsPolish.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your english grades:");
 var english = new StudentInMemory("Kasia", "Nowak", "15");
@@ -70,9 +70,9 @@ while (true)
     }
 }
 var statisticsEnglish = english.GetStatisticsEnglish();
-Console.WriteLine(statisticsEnglish.Average);
-Console.WriteLine(statisticsEnglish.Min);
-Console.WriteLine(statisticsEnglish.Max);
+Console.WriteLine($"Average:{statisticsEnglish.Average}");
+Console.WriteLine($"Min:{statisticsEnglish.Min}");
+Console.WriteLine($"Max:{statisticsEnglish.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your grades in IT:");
 var IT = new StudentInMemory("Kasia", "Nowak", "15");
@@ -93,9 +93,9 @@ while (true)
     }
 }
 var statisticsIT = IT.GetStatisticsIT();
-Console.WriteLine(statisticsIT.Average);
-Console.WriteLine(statisticsIT.Min);
-Console.WriteLine(statisticsIT.Max);
+Console.WriteLine($"Average:{statisticsIT.Average}");
+Console.WriteLine($"Min:{statisticsIT.Min}");
+Console.WriteLine($"Max:{statisticsIT.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your physics grades:");
 var physics = new StudentInMemory("Kasia", "Nowak", "15");
@@ -115,16 +115,16 @@ while (true)
         Console.WriteLine($"Exception catch {e.Message}");
     }
 }
-var statisticsPhysics = physics.GetStatisticsIT();
-Console.WriteLine(statisticsPhysics.Average);
-Console.WriteLine(statisticsPhysics.Min);
-Console.WriteLine(statisticsPhysics.Max);
+var statisticsPhysics = physics.GetStatisticsPhysics();
+Console.WriteLine($"Average:{statisticsPhysics.Average}");
+Console.WriteLine($"Min:{statisticsPhysics.Min}");
+Console.WriteLine($"Max:{statisticsPhysics.Max}");
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine("Welcome to the student's journal !");
-Console.WriteLine("============================");
+Console.WriteLine(" ============================");
 Console.WriteLine("Save your grades on a list:");
 Console.WriteLine();
 Console.WriteLine("Submit your math grades:");
@@ -147,9 +147,9 @@ while (true)
     }
 }
 var statisticsMath2 = math2.GetStatisticsMath();
-Console.WriteLine(statisticsMath2.Average);
-Console.WriteLine(statisticsMath2.Min);
-Console.WriteLine(statisticsMath2.Max);
+Console.WriteLine($"Average:{statisticsMath2.Average}");
+Console.WriteLine($"Min:{statisticsMath2.Min}");
+Console.WriteLine($"Max:{statisticsMath2.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your polish grades:");
 var polish2 = new StudentInFile("Kasia", "Nowak", "15");
@@ -170,9 +170,9 @@ while (true)
     }
 }
 var statisticsPolish2 = polish2.GetStatisticsPolish();
-Console.WriteLine(statisticsPolish2.Average);
-Console.WriteLine(statisticsPolish2.Min);
-Console.WriteLine(statisticsPolish2.Max);
+Console.WriteLine($"Average:{statisticsPolish2.Average}");
+Console.WriteLine($"Min:{statisticsPolish2.Min}");
+Console.WriteLine($"Min:{statisticsPolish2.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your english grades:");
 var english2 = new StudentInMemory("Kasia", "Nowak", "15");
@@ -193,9 +193,9 @@ while (true)
     }
 }
 var statisticsEnglish2 = english2.GetStatisticsEnglish();
-Console.WriteLine(statisticsEnglish2.Average);
-Console.WriteLine(statisticsEnglish2.Min);
-Console.WriteLine(statisticsEnglish2.Max);
+Console.WriteLine($"Average:{statisticsEnglish2.Average}");
+Console.WriteLine($"Min:{statisticsEnglish2.Min}");
+Console.WriteLine($"Min:{statisticsEnglish2.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your grades in IT:");
 var IT2 = new StudentInMemory("Kasia", "Nowak", "15");
@@ -216,9 +216,9 @@ while (true)
     }
 }
 var statisticsIT2 = IT2.GetStatisticsIT();
-Console.WriteLine(statisticsIT2.Average);
-Console.WriteLine(statisticsIT2.Min);
-Console.WriteLine(statisticsIT2.Max);
+Console.WriteLine($"Average:{statisticsIT2.Average}");
+Console.WriteLine($"Min:{statisticsIT2.Min}");
+Console.WriteLine($"Max:{statisticsIT2.Max}");
 Console.WriteLine();
 Console.WriteLine("Submit your physics grades:");
 var physics2 = new StudentInMemory("Kasia", "Nowak", "15");
@@ -239,6 +239,6 @@ while (true)
     }
 }
 var statisticsPhysics2 = physics2.GetStatisticsPhysics();
-Console.WriteLine(statisticsPhysics2.Average);
-Console.WriteLine(statisticsPhysics2.Min);
-Console.WriteLine(statisticsPhysics2.Max);
+Console.WriteLine($"Average:{statisticsPhysics2.Average}");
+Console.WriteLine($"Min:{statisticsPhysics2.Min}");
+Console.WriteLine($"Max:{statisticsPhysics2.Max}");

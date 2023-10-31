@@ -1,4 +1,6 @@
-﻿namespace StudentJournal
+﻿using System.Diagnostics;
+
+namespace StudentJournal
 {
     public class StudentInMemory : StudentBase
     {
@@ -31,18 +33,22 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
         public override void AddGradeMath(string gradeMath)
         {
             if (int.TryParse(gradeMath, out int result))
             {
-                this.gradesMath.Add(result);
+              this.AddGradeMath(result);
+            }
+            else if (char.TryParse(gradeMath, out char charResult))
+            {
+                this.AddGradeMath(charResult);
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. String isn't int.");
             }
 
 
@@ -76,7 +82,7 @@
                     this.gradesMath.Add(1);
                     break;
                 default:
-                    throw new Exception("This grade doesn't exist");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradePolish(double grade)
@@ -98,18 +104,22 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
         public override void AddGradePolish(string gradePolish)
         {
             if (int.TryParse(gradePolish, out int result))
             {
-                this.gradesPolish.Add(result);
+                this.AddGradePolish(result);
+            }
+            else if (char.TryParse(gradePolish, out char charResult))
+            {
+                this.AddGradePolish(charResult);
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. String isn't int.");
             }
         }
         public override void AddGradePolish(char gradePolish)
@@ -141,7 +151,7 @@
                     this.gradesPolish.Add(1);
                     break;
                 default:
-                    throw new Exception("This grade doesn't exist"); ;
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F."); ;
             }
         }
         public override void AddGradeEnglish(double grade)
@@ -163,18 +173,22 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
         public override void AddGradeEnglish(string gradeEnglish)
         {
             if (int.TryParse(gradeEnglish, out int result))
             {
-                this.gradesEnglish.Add(result);
+                this.AddGradeEnglish(result);
+            }
+            else if (char.TryParse(gradeEnglish, out char charResult))
+            {
+                this.AddGradeEnglish(charResult);
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. String isn't int.");
             }
         }
         public override void AddGradeEnglish(char gradeEnglish)
@@ -206,7 +220,7 @@
                     this.gradesEnglish.Add(1);
                     break;
                 default:
-                    throw new Exception("This grade doesn't exist");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradeIT(double grade)
@@ -228,18 +242,22 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
         public override void AddGradeIT(string gradeIT)
         {
             if (int.TryParse(gradeIT, out int result))
             {
-                this.gradesIT.Add(result);
+                this.AddGradeIT(result);
+            }
+            else if (char.TryParse(gradeIT, out char charResult))
+            {
+                this.AddGradeIT(charResult);
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. String isn't int.");
             }
         }
         public override void AddGradeIT(char gradeIT)
@@ -271,7 +289,7 @@
                     this.gradesIT.Add(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grades doesnt't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradePhysics(double grade)
@@ -293,18 +311,22 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
         public override void AddGradePhysics(string gradePhysics)
         {
             if (int.TryParse(gradePhysics, out int result))
             {
-                this.gradesPhysics.Add(result);
+                this.AddGradePhysics(result);
+            }
+            else if (char.TryParse(gradePhysics, out char charResult))
+            {
+                this.AddGradePhysics(charResult);
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. String isn't int.");
             }
         }
         public override void AddGradePhysics(char gradePhysics)
@@ -336,7 +358,7 @@
                     this.gradesPhysics.Add(1);
                     break;
                 default:
-                    throw new Exception("This grade doesn't exist");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
 

@@ -40,7 +40,7 @@
             }
             else
             {
-                throw new Exception("Invalid grade value");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
 
         }
@@ -57,7 +57,7 @@
             }
             else
             {
-                throw new Exception("Invalid string value");
+                throw new Exception("This grade doesn't exist. String isn't int.");
 
             }
         }
@@ -91,7 +91,7 @@
                     this.AddGradeMath(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
 
@@ -121,7 +121,7 @@
             }
             else
             {
-                throw new Exception("Invalid grade value");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
 
@@ -137,7 +137,7 @@
             }
             else
             {
-                throw new Exception("Invalid string value");
+                throw new Exception("This grade doesn't exist. String isn't int.");
 
             }
         }
@@ -171,7 +171,7 @@
                     this.AddGradePolish(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradeEnglish(double grade)
@@ -200,7 +200,7 @@
             }
             else
             {
-                throw new Exception("Invalid grade value");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
 
@@ -216,7 +216,7 @@
             }
             else
             {
-                throw new Exception("Invalid string value");
+                throw new Exception("This grade doesn't exist. String isn't int.");
 
             }
         }
@@ -250,7 +250,7 @@
                     this.AddGradeEnglish(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradeIT(double grade)
@@ -279,7 +279,7 @@
             }
             else
             {
-                throw new Exception("Invalid grade value");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
 
@@ -295,7 +295,7 @@
             }
             else
             {
-                throw new Exception("Invalid string value");
+                throw new Exception("This grade doesn't exist. String isn't int.");
 
             }
         }
@@ -329,7 +329,7 @@
                     this.AddGradeIT(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradePhysics(double grade)
@@ -359,7 +359,7 @@
             }
             else
             {
-                throw new Exception("This grade doesn't exist");
+                throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
 
@@ -375,7 +375,7 @@
             }
             else
             {
-                throw new Exception("Invalid string value");
+                throw new Exception("This grade doesn't exist. String isn't int.");
 
             }
         }
@@ -409,7 +409,7 @@
                     this.AddGradePhysics(1);
                     break;
                 default:
-                    throw new Exception("Wrong Letter");
+                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override Statistics GetStatisticsMath()
