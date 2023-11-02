@@ -2,28 +2,17 @@
 {
     public class StudentInMemory : StudentBase
     {
-        private List<int> gradesMath = new List<int>();
-        private List<int> gradesPolish = new List<int>();
-        private List<int> gradesEnglish = new List<int>();
-        private List<int> gradesIT = new List<int>();
-        private List<int> gradesPhysics = new List<int>();
+        private List<float> gradesMath = new List<float>();
+        private List<float> gradesPolish = new List<float>();
+        private List<float> gradesEnglish = new List<float>();
+        private List<float> gradesIT = new List<float>();
+        private List<float> gradesPhysics = new List<float>();
         public StudentInMemory(string name, string surename, string age)
             : base(name, surename, age)
         {
 
         }
-        public override void AddGradeMath(double grade)
-        {
-            int result = (int)grade;
-            this.AddGradeMath(result);
-        }
-
-        public override void AddGradeMath(float grade)
-        {
-            int result = (int)grade;
-            this.AddGradeMath(result);
-        }
-        public override void AddGradeMath(int gradeMath)
+        public override void AddGradeMath(float gradeMath)
         {
             if (gradeMath >= 1 && gradeMath <= 6)
             {
@@ -34,19 +23,8 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
-        public override void AddGradePolish(double grade)
-        {
-            int result = (int)grade;
-            this.AddGradePolish(result);
-        }
-
-        public override void AddGradePolish(float grade)
-        {
-            int result = (int)grade;
-            this.AddGradePolish(result);
-        }
-        public override void AddGradePolish(int gradePolish)
+       
+        public override void AddGradePolish(float gradePolish)
         {
             if (gradePolish >= 1 && gradePolish <= 6)
             {
@@ -57,19 +35,9 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
+        
 
-        public override void AddGradeEnglish(double grade)
-        {
-            int result = (int)grade;
-            this.gradesEnglish.Add(result);
-        }
-
-        public override void AddGradeEnglish(float grade)
-        {
-            int result = (int)grade;
-            this.gradesEnglish.Add(result);
-        }
-        public override void AddGradeEnglish(int gradeEnglish)
+        public override void AddGradeEnglish(float gradeEnglish)
         {
             if (gradeEnglish >= 1 && gradeEnglish <= 6)
             {
@@ -80,19 +48,8 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
-        public override void AddGradeIT(double grade)
-        {
-            int result = (int)grade;
-            this.AddGradeIT(result);
-        }
-
-        public override void AddGradeIT(float grade)
-        {
-            int result = (int)grade;
-            this.AddGradeIT(result);
-        }
-        public override void AddGradeIT(int gradeIT)
+        
+        public override void AddGradeIT(float gradeIT)
         {
             if (gradeIT >= 1 && gradeIT <= 6)
             {
@@ -103,30 +60,19 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
-        public override void AddGradePhysics(double grade)
-        {
-            int result = (int)grade;
-            this.AddGradePhysics(result);
-        }
-
+        
         public override void AddGradePhysics(float grade)
         {
-            int result = (int)grade;
-            this.AddGradePhysics(result);
-        }
-        public override void AddGradePhysics(int gradePhysics)
-        {
-            if (gradePhysics >= 1 && gradePhysics <= 6)
+            if (grade >= 1 && grade <= 6)
             {
-                this.gradesPhysics.Add(gradePhysics);
+                this.gradesIT.Add(grade);
             }
             else
             {
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
+       
         public override Statistics GetStatisticsMath()
         {
             var statisticsMath = new Statistics();

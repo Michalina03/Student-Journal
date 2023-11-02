@@ -14,21 +14,7 @@
 
         }
 
-        public override void AddGradeMath(double grade)
-        {
-            using (var writer = File.AppendText(gradesMath))
-            {
-                writer.WriteLine(grade);
-            }
-        }
         public override void AddGradeMath(float grade)
-        {
-            using (var writer = File.AppendText(gradesMath))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-        public override void AddGradeMath(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -41,23 +27,8 @@
             {
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
-
-        }
-        public override void AddGradePolish(double grade)
-        {
-            using (var writer = File.AppendText(gradesPolish))
-            {
-                writer.WriteLine(grade);
-            }
         }
         public override void AddGradePolish(float grade)
-        {
-            using (var writer = File.AppendText(gradesPolish))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-        public override void AddGradePolish(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -71,21 +42,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        public override void AddGradeEnglish(double grade)
-        {
-            using (var writer = File.AppendText(gradesEnglish))
-            {
-                writer.WriteLine(grade);
-            }
-        }
         public override void AddGradeEnglish(float grade)
-        {
-            using (var writer = File.AppendText(gradesEnglish))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-        public override void AddGradeEnglish(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -99,22 +56,8 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        public override void AddGradeIT(double grade)
-        {
-            using (var writer = File.AppendText(gradesIT))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-
+       
         public override void AddGradeIT(float grade)
-        {
-            using (var writer = File.AppendText(gradesIT))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-        public override void AddGradeIT(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -128,21 +71,8 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        public override void AddGradePhysics(double grade)
-        {
-            using (var writer = File.AppendText(gradesPhysics))
-            {
-                writer.WriteLine(grade);
-            }
-        }
+       
         public override void AddGradePhysics(float grade)
-        {
-            using (var writer = File.AppendText(gradesPhysics))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-        public override void AddGradePhysics(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
@@ -167,7 +97,7 @@
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            var grade = int.Parse(line);
+                            var grade = float.Parse(line);
                             result.Add(grade);
                             line = reader.ReadLine();
                         }

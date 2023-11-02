@@ -13,24 +13,14 @@
         public string Surname { get; private set; }
         public string Age { get; private set; }
 
-        public abstract void AddGradeMath(int grade);
-        public abstract void AddGradePolish(int grade);
-        public abstract void AddGradeEnglish(int grade);
-        public abstract void AddGradeIT(int grade);
-        public abstract void AddGradePhysics(int grade);
         public abstract void AddGradeMath(float grade);
         public abstract void AddGradePolish(float grade);
         public abstract void AddGradeEnglish(float grade);
         public abstract void AddGradeIT(float grade);
         public abstract void AddGradePhysics(float grade);
-        public abstract void AddGradeMath(double grade);
-        public abstract void AddGradePolish(double grade);
-        public abstract void AddGradeEnglish(double grade);
-        public abstract void AddGradeIT(double grade);
-        public abstract void AddGradePhysics(double grade);
         public void AddGradeMath(string grade)
         {
-            if (int.TryParse(grade, out int result))
+            if (float.TryParse(grade, out float result))
             {
                 this.AddGradeMath(result);
             }
@@ -46,7 +36,7 @@
         }
         public void AddGradePolish(string grade)
         {
-            if (int.TryParse(grade, out int result))
+            if (float.TryParse(grade, out float result))
             {
                 this.AddGradePolish(result);
             }
@@ -62,7 +52,7 @@
         }
         public void AddGradeEnglish(string grade)
         {
-            if (int.TryParse(grade, out int result))
+            if (float.TryParse(grade, out float result))
             {
                 this.AddGradeEnglish(result);
             }
@@ -78,7 +68,7 @@
 
         public void AddGradeIT(string grade)
         {
-            if (int.TryParse(grade, out int result))
+            if (float.TryParse(grade, out float result))
             {
                 this.AddGradeIT(result);
             }
@@ -94,7 +84,7 @@
         }
         public void AddGradePhysics(string grade)
         {
-            if (int.TryParse(grade, out int result))
+            if (float.TryParse(grade, out float result))
             {
                 this.AddGradePhysics(result);
             }

@@ -7,21 +7,11 @@
         string Age { get; }
 
 
-        void AddGradeMath(int grade);
-        void AddGradePolish(int grade);
-        void AddGradeEnglish(int grade);
-        void AddGradeIT(int grade);
-        void AddGradePhysics(int grade);
         void AddGradeMath(float grade);
         void AddGradePolish(float grade);
         void AddGradeEnglish(float grade);
         void AddGradeIT(float grade);
         void AddGradePhysics(float grade);
-        void AddGradeMath(double grade);
-        void AddGradePolish(double grade);
-        void AddGradeEnglish(double grade);
-        void AddGradeIT(double grade);
-        void AddGradePhysics(double grade);
         void AddGradeMath(string grade);
         void AddGradePolish(string grade);
         void AddGradeEnglish(string gradeEnglish);
