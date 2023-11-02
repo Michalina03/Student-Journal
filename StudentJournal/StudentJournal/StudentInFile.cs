@@ -105,42 +105,6 @@
                 }
                 return result;
             }
-            //{
-            //    Statistics stats = new Statistics();
-            //    stats.Min = int.MaxValue;
-            //    stats.Max = int.MinValue;
-            //    stats.Average = 0;
-            //    if (File.Exists(gradesMath))
-            //    {
-            //        using (var reader = File.OpenText(gradesMath))
-            //        {
-            //            int i = 0;
-            //            var line = reader.ReadLine();
-            //            while (line != null)
-            //            {
-            //                i++;
-            //                int grade = int.Parse(line);
-
-            //                stats.Average += grade;
-
-            //                line = reader.ReadLine();
-            //            }
-            //            if (i > 0)
-            //            {
-            //                stats.Average /= i;
-            //            }
-            //            else
-            //            {
-            //                stats.Min = 0;
-            //                stats.Max = 0;
-            //                stats.Average = 0;
-            //            }
-
-            //        }
-
-            //    }
-            //    return stats;
-            //}
         }
         public override Statistics GetStatisticsPolish()
         {
