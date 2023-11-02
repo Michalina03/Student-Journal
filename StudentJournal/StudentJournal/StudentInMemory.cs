@@ -23,7 +23,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-       
+
         public override void AddGradePolish(float gradePolish)
         {
             if (gradePolish >= 1 && gradePolish <= 6)
@@ -35,7 +35,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        
+
 
         public override void AddGradeEnglish(float gradeEnglish)
         {
@@ -48,7 +48,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        
+
         public override void AddGradeIT(float gradeIT)
         {
             if (gradeIT >= 1 && gradeIT <= 6)
@@ -60,19 +60,19 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-        
+
         public override void AddGradePhysics(float grade)
         {
             if (grade >= 1 && grade <= 6)
             {
-                this.gradesIT.Add(grade);
+                this.gradesPhysics.Add(grade);
             }
             else
             {
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-       
+
         public override Statistics GetStatisticsMath()
         {
             var statisticsMath = new Statistics();
@@ -82,16 +82,16 @@
                 statisticsMath.Average += grade;
                 statisticsMath.Add(grade);
             }
-           
-                statisticsMath.Average = statisticsMath.Average / this.gradesMath.Count;
-           
+
+            statisticsMath.Average = statisticsMath.Average / this.gradesMath.Count;
+
 
             return statisticsMath;
         }
         public override Statistics GetStatisticsPolish()
         {
             var statisticsPolish = new Statistics();
-            
+
             foreach (var grade in this.gradesPolish)
             {
                 statisticsPolish.Add(grade);

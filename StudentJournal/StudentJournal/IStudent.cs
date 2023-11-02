@@ -29,6 +29,6 @@
         Statistics GetStatisticsEnglish();
         Statistics GetStatisticsIT();
         Statistics GetStatisticsPhysics();
-        
+
     }
 }

@@ -56,7 +56,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-       
+
         public override void AddGradeIT(float grade)
         {
             if (grade >= 1 && grade <= 6)
@@ -71,7 +71,7 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-       
+
         public override void AddGradePhysics(float grade)
         {
             if (grade >= 1 && grade <= 6)
@@ -86,6 +86,8 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
+
+
         public override Statistics GetStatisticsMath()
         {
             {
@@ -109,168 +111,82 @@
         public override Statistics GetStatisticsPolish()
         {
             {
-                Statistics stats = new Statistics();
-                stats.Min = int.MaxValue;
-                stats.Max = int.MinValue;
-                stats.Average = 0;
-                if (File.Exists(gradesPolish))
+                var result = new Statistics();
+                if (File.Exists($"{gradesPolish}"))
                 {
-                    using (var reader = File.OpenText(gradesPolish))
+                    using (var reader = File.OpenText($"{gradesPolish}"))
                     {
-                        int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            i++;
-                            int point = int.Parse(line);
-                            stats.Min = Math.Min(stats.Min, point);
-                            stats.Max = Math.Max(stats.Max, point);
-                            stats.Average += point;
-
+                            var grade = float.Parse(line);
+                            result.Add(grade);
                             line = reader.ReadLine();
                         }
-                        if (i > 0)
-                        {
-                            stats.Average /= i;
-                        }
-                        else
-                        {
-                            stats.Min = 0;
-                            stats.Max = 0;
-                            stats.Average = 0;
-                        }
-
                     }
-
                 }
-                return stats;
+                return result;
             }
         }
         public override Statistics GetStatisticsEnglish()
         {
             {
-                Statistics stats = new Statistics();
-                stats.Min = int.MaxValue;
-                stats.Max = int.MinValue;
-                stats.Average = 0;
-                if (File.Exists(gradesEnglish))
+                var result = new Statistics();
+                if (File.Exists($"{gradesEnglish}"))
                 {
-                    using (var reader = File.OpenText(gradesEnglish))
+                    using (var reader = File.OpenText($"{gradesEnglish}"))
                     {
-                        int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            i++;
-                            int point = int.Parse(line);
-                            stats.Min = Math.Min(stats.Min, point);
-                            stats.Max = Math.Max(stats.Max, point);
-                            stats.Average += point;
-
+                            var grade = float.Parse(line);
+                            result.Add(grade);
                             line = reader.ReadLine();
                         }
-                        if (i > 0)
-                        {
-                            stats.Average /= i;
-                        }
-                        else
-                        {
-                            stats.Min = 0;
-                            stats.Max = 0;
-                            stats.Average = 0;
-                        }
-
                     }
-
                 }
-                return stats;
+                return result;
             }
         }
-
         public override Statistics GetStatisticsIT()
         {
             {
-                Statistics stats = new Statistics();
-                stats.Min = int.MaxValue;
-                stats.Max = int.MinValue;
-                stats.Average = 0;
-                if (File.Exists(gradesIT))
+                var result = new Statistics();
+                if (File.Exists($"{gradesIT}"))
                 {
-                    using (var reader = File.OpenText(gradesIT))
+                    using (var reader = File.OpenText($"{gradesIT}"))
                     {
-                        int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            i++;
-                            int point = int.Parse(line);
-                            stats.Min = Math.Min(stats.Min, point);
-                            stats.Max = Math.Max(stats.Max, point);
-                            stats.Average += point;
-
+                            var grade = float.Parse(line);
+                            result.Add(grade);
                             line = reader.ReadLine();
                         }
-                        if (i > 0)
-                        {
-                            stats.Average /= i;
-                        }
-                        else
-                        {
-                            stats.Min = 0;
-                            stats.Max = 0;
-                            stats.Average = 0;
-                        }
-
                     }
-
                 }
-                return stats;
+                return result;
             }
         }
-
-
-
         public override Statistics GetStatisticsPhysics()
         {
             {
-                Statistics stats = new Statistics();
-                stats.Min = int.MaxValue;
-                stats.Max = int.MinValue;
-                stats.Average = 0;
-                if (File.Exists(gradesPhysics))
+                var result = new Statistics();
+                if (File.Exists($"{gradesPhysics}"))
                 {
-                    using (var reader = File.OpenText(gradesPhysics))
+                    using (var reader = File.OpenText($"{gradesPhysics}"))
                     {
-                        int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            i++;
-                            int point = int.Parse(line);
-                            stats.Min = Math.Min(stats.Min, point);
-                            stats.Max = Math.Max(stats.Max, point);
-                            stats.Average += point;
-
+                            var grade = float.Parse(line);
+                            result.Add(grade);
                             line = reader.ReadLine();
                         }
-                        if (i > 0)
-                        {
-                            stats.Average /= i;
-                        }
-                        else
-                        {
-                            stats.Min = 0;
-                            stats.Max = 0;
-                            stats.Average = 0;
-                        }
-
                     }
-
                 }
-                return stats;
+                return result;
             }
         }
-
-
     }
 }
