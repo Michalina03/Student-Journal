@@ -24,7 +24,7 @@
         void AddGradePhysics(double grade);
         void AddGradeMath(string grade);
         void AddGradePolish(string grade);
-        void AddGradeEnglish(string grade);
+        void AddGradeEnglish(string gradeEnglish);
         void AddGradeIT(string grade);
         void AddGradePhysics(string grade);
         void AddGradeMath(char grade);
@@ -39,5 +39,6 @@
         Statistics GetStatisticsEnglish();
         Statistics GetStatisticsIT();
         Statistics GetStatisticsPhysics();
+        
     }
 }

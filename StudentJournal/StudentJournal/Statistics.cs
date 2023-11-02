@@ -2,9 +2,21 @@
 {
     public class Statistics
     {
-        public float Min { get; set; }
-        public float Max { get; set; }
-        public float Average { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
+        public int Average { get; set; }
 
+        public Statistics()
+        {
+            Max = int.MinValue;
+            Min = int.MaxValue;
+            Average = 0;
+        }
+        public void Add(int grade)
+        {
+            Min = Math.Min(grade, Min);
+            Max = Math.Max(grade, Max);
+        }
     }
 }
+

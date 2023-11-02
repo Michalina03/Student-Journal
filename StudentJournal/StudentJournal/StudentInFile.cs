@@ -2,38 +2,37 @@
 {
     public class StudentInFile : StudentBase
     {
-        private const string fileName = "grades.txt";
-        private const string fileName2 = "grades2.txt";
-        private const string fileName3 = "grades3.txt";
-        private const string fileName4 = "grades4.txt";
-        private const string fileName5 = "grades5.txt";
+        private const string gradesMath = "gradesMath.txt";
+        private const string gradesPolish = "gradesPolish.txt";
+        private const string gradesEnglish = "gradesEnglish.txt";
+        private const string gradesIT = "gradesIT.txt";
+        private const string gradesPhysics = "gradesPhysics.txt";
 
         public StudentInFile(string name, string surename, string age)
             : base(name, surename, age)
         {
 
         }
+
         public override void AddGradeMath(double grade)
         {
-            using (var writer = File.AppendText(fileName))
+            using (var writer = File.AppendText(gradesMath))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradeMath(float grade)
         {
-            using (var writer = File.AppendText(fileName))
+            using (var writer = File.AppendText(gradesMath))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradeMath(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName))
+                using (var writer = File.AppendText(gradesMath))
                 {
                     writer.WriteLine(grade);
                 }
@@ -44,68 +43,16 @@
             }
 
         }
-
-        public override void AddGradeMath(string grade)
-        {
-            if (int.TryParse(grade, out int result))
-            {
-                this.AddGradeMath(result);
-            }
-            else if (char.TryParse(grade, out char charResult))
-            {
-                this.AddGradeMath(charResult);
-            }
-            else
-            {
-                throw new Exception("This grade doesn't exist. String isn't int.");
-
-            }
-        }
-
-        public override void AddGradeMath(char grade)
-        {
-            switch (grade)
-            {
-                case 'a':
-                case 'A':
-                    this.AddGradeMath(6);
-                    break;
-                case 'b':
-                case 'B':
-                    this.AddGradeMath(5);
-                    break;
-                case 'c':
-                case 'C':
-                    this.AddGradeMath(4);
-                    break;
-                case 'd':
-                case 'D':
-                    this.AddGradeMath(3);
-                    break;
-                case 'e':
-                case 'E':
-                    this.AddGradeMath(2);
-                    break;
-                case 'f':
-                case 'F':
-                    this.AddGradeMath(1);
-                    break;
-                default:
-                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
-            }
-        }
-
         public override void AddGradePolish(double grade)
         {
-            using (var writer = File.AppendText(fileName2))
+            using (var writer = File.AppendText(gradesPolish))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradePolish(float grade)
         {
-            using (var writer = File.AppendText(fileName2))
+            using (var writer = File.AppendText(gradesPolish))
             {
                 writer.WriteLine(grade);
             }
@@ -114,7 +61,7 @@
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName2))
+                using (var writer = File.AppendText(gradesPolish))
                 {
                     writer.WriteLine(grade);
                 }
@@ -124,67 +71,16 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
-        public override void AddGradePolish(string grade)
-        {
-            if (int.TryParse(grade, out int result))
-            {
-                this.AddGradePolish(result);
-            }
-            else if (char.TryParse(grade, out char charResult))
-            {
-                this.AddGradePolish(charResult);
-            }
-            else
-            {
-                throw new Exception("This grade doesn't exist. String isn't int.");
-
-            }
-        }
-
-        public override void AddGradePolish(char grade)
-        {
-            switch (grade)
-            {
-                case 'a':
-                case 'A':
-                    this.AddGradePolish(6);
-                    break;
-                case 'b':
-                case 'B':
-                    this.AddGradePolish(5);
-                    break;
-                case 'c':
-                case 'C':
-                    this.AddGradePolish(4);
-                    break;
-                case 'd':
-                case 'D':
-                    this.AddGradePolish(3);
-                    break;
-                case 'e':
-                case 'E':
-                    this.AddGradePolish(2);
-                    break;
-                case 'f':
-                case 'F':
-                    this.AddGradePolish(1);
-                    break;
-                default:
-                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
-            }
-        }
         public override void AddGradeEnglish(double grade)
         {
-            using (var writer = File.AppendText(fileName3))
+            using (var writer = File.AppendText(gradesEnglish))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradeEnglish(float grade)
         {
-            using (var writer = File.AppendText(fileName3))
+            using (var writer = File.AppendText(gradesEnglish))
             {
                 writer.WriteLine(grade);
             }
@@ -193,7 +89,7 @@
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName3))
+                using (var writer = File.AppendText(gradesEnglish))
                 {
                     writer.WriteLine(grade);
                 }
@@ -203,59 +99,9 @@
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
             }
         }
-
-        public override void AddGradeEnglish(string grade)
-        {
-            if (int.TryParse(grade, out int result))
-            {
-                this.AddGradeEnglish(result);
-            }
-            else if (char.TryParse(grade, out char charResult))
-            {
-                this.AddGradeEnglish(charResult);
-            }
-            else
-            {
-                throw new Exception("This grade doesn't exist. String isn't int.");
-
-            }
-        }
-
-        public override void AddGradeEnglish(char grade)
-        {
-            switch (grade)
-            {
-                case 'a':
-                case 'A':
-                    this.AddGradeEnglish(6);
-                    break;
-                case 'b':
-                case 'B':
-                    this.AddGradeEnglish(5);
-                    break;
-                case 'c':
-                case 'C':
-                    this.AddGradeEnglish(4);
-                    break;
-                case 'd':
-                case 'D':
-                    this.AddGradeEnglish(3);
-                    break;
-                case 'e':
-                case 'E':
-                    this.AddGradeEnglish(2);
-                    break;
-                case 'f':
-                case 'F':
-                    this.AddGradeEnglish(1);
-                    break;
-                default:
-                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
-            }
-        }
         public override void AddGradeIT(double grade)
         {
-            using (var writer = File.AppendText(fileName4))
+            using (var writer = File.AppendText(gradesIT))
             {
                 writer.WriteLine(grade);
             }
@@ -263,7 +109,7 @@
 
         public override void AddGradeIT(float grade)
         {
-            using (var writer = File.AppendText(fileName4))
+            using (var writer = File.AppendText(gradesIT))
             {
                 writer.WriteLine(grade);
             }
@@ -272,7 +118,7 @@
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName4))
+                using (var writer = File.AppendText(gradesIT))
                 {
                     writer.WriteLine(grade);
                 }
@@ -280,79 +126,27 @@
             else
             {
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
-            }
-        }
-
-        public override void AddGradeIT(string grade)
-        {
-            if (int.TryParse(grade, out int result))
-            {
-                this.AddGradeIT(result);
-            }
-            else if (char.TryParse(grade, out char charResult))
-            {
-                this.AddGradeIT(charResult);
-            }
-            else
-            {
-                throw new Exception("This grade doesn't exist. String isn't int.");
-
-            }
-        }
-
-        public override void AddGradeIT(char grade)
-        {
-            switch (grade)
-            {
-                case 'a':
-                case 'A':
-                    this.AddGradeIT(6);
-                    break;
-                case 'b':
-                case 'B':
-                    this.AddGradeIT(5);
-                    break;
-                case 'c':
-                case 'C':
-                    this.AddGradeIT(4);
-                    break;
-                case 'd':
-                case 'D':
-                    this.AddGradeIT(3);
-                    break;
-                case 'e':
-                case 'E':
-                    this.AddGradeIT(2);
-                    break;
-                case 'f':
-                case 'F':
-                    this.AddGradeIT(1);
-                    break;
-                default:
-                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override void AddGradePhysics(double grade)
         {
-            using (var writer = File.AppendText(fileName5))
+            using (var writer = File.AppendText(gradesPhysics))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradePhysics(float grade)
         {
-            using (var writer = File.AppendText(fileName5))
+            using (var writer = File.AppendText(gradesPhysics))
             {
                 writer.WriteLine(grade);
             }
         }
-
         public override void AddGradePhysics(int grade)
         {
             if (grade >= 1 && grade <= 6)
             {
-                using (var writer = File.AppendText(fileName5))
+                using (var writer = File.AppendText(gradesPhysics))
                 {
                     writer.WriteLine(grade);
                 }
@@ -360,115 +154,81 @@
             else
             {
                 throw new Exception("This grade doesn't exist. Give a rating from 1 to 6.");
-            }
-        }
-
-        public override void AddGradePhysics(string grade)
-        {
-            if (int.TryParse(grade, out int result))
-            {
-                this.AddGradePhysics(result);
-            }
-            else if (char.TryParse(grade, out char charResult))
-            {
-                this.AddGradePhysics(charResult);
-            }
-            else
-            {
-                throw new Exception("This grade doesn't exist. String isn't int.");
-
-            }
-        }
-
-        public override void AddGradePhysics(char grade)
-        {
-            switch (grade)
-            {
-                case 'a':
-                case 'A':
-                    this.AddGradePhysics(6);
-                    break;
-                case 'b':
-                case 'B':
-                    this.AddGradePhysics(5);
-                    break;
-                case 'c':
-                case 'C':
-                    this.AddGradePhysics(4);
-                    break;
-                case 'd':
-                case 'D':
-                    this.AddGradePhysics(3);
-                    break;
-                case 'e':
-                case 'E':
-                    this.AddGradePhysics(2);
-                    break;
-                case 'f':
-                case 'F':
-                    this.AddGradePhysics(1);
-                    break;
-                default:
-                    throw new Exception("This grade doesn't exist. Give a rating from A to F.");
             }
         }
         public override Statistics GetStatisticsMath()
         {
             {
-                Statistics stats = new Statistics();
-                stats.Min = float.MaxValue;
-                stats.Max = float.MinValue;
-                stats.Average = 0;
-                if (File.Exists(fileName2))
+                var result = new Statistics();
+                if (File.Exists($"{gradesMath}"))
                 {
-                    using (var reader = File.OpenText(fileName2))
+                    using (var reader = File.OpenText($"{gradesMath}"))
                     {
-                        int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
-                            i++;
-                            float point = float.Parse(line);
-                            stats.Min = Math.Min(stats.Min, point);
-                            stats.Max = Math.Max(stats.Max, point);
-                            stats.Average += point;
-
+                            var grade = int.Parse(line);
+                            result.Add(grade);
                             line = reader.ReadLine();
                         }
-                        if (i > 0)
-                        {
-                            stats.Average /= i;
-                        }
-                        else
-                        {
-                            stats.Min = 0;
-                            stats.Max = 0;
-                            stats.Average = 0;
-                        }
-
                     }
-
                 }
-                return stats;
+                return result;
             }
+            //{
+            //    Statistics stats = new Statistics();
+            //    stats.Min = int.MaxValue;
+            //    stats.Max = int.MinValue;
+            //    stats.Average = 0;
+            //    if (File.Exists(gradesMath))
+            //    {
+            //        using (var reader = File.OpenText(gradesMath))
+            //        {
+            //            int i = 0;
+            //            var line = reader.ReadLine();
+            //            while (line != null)
+            //            {
+            //                i++;
+            //                int grade = int.Parse(line);
+
+            //                stats.Average += grade;
+
+            //                line = reader.ReadLine();
+            //            }
+            //            if (i > 0)
+            //            {
+            //                stats.Average /= i;
+            //            }
+            //            else
+            //            {
+            //                stats.Min = 0;
+            //                stats.Max = 0;
+            //                stats.Average = 0;
+            //            }
+
+            //        }
+
+            //    }
+            //    return stats;
+            //}
         }
         public override Statistics GetStatisticsPolish()
         {
             {
                 Statistics stats = new Statistics();
-                stats.Min = float.MaxValue;
-                stats.Max = float.MinValue;
+                stats.Min = int.MaxValue;
+                stats.Max = int.MinValue;
                 stats.Average = 0;
-                if (File.Exists(fileName2))
+                if (File.Exists(gradesPolish))
                 {
-                    using (var reader = File.OpenText(fileName2))
+                    using (var reader = File.OpenText(gradesPolish))
                     {
                         int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
                             i++;
-                            float point = float.Parse(line);
+                            int point = int.Parse(line);
                             stats.Min = Math.Min(stats.Min, point);
                             stats.Max = Math.Max(stats.Max, point);
                             stats.Average += point;
@@ -496,19 +256,19 @@
         {
             {
                 Statistics stats = new Statistics();
-                stats.Min = float.MaxValue;
-                stats.Max = float.MinValue;
+                stats.Min = int.MaxValue;
+                stats.Max = int.MinValue;
                 stats.Average = 0;
-                if (File.Exists(fileName3))
+                if (File.Exists(gradesEnglish))
                 {
-                    using (var reader = File.OpenText(fileName3))
+                    using (var reader = File.OpenText(gradesEnglish))
                     {
                         int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
                             i++;
-                            float point = float.Parse(line);
+                            int point = int.Parse(line);
                             stats.Min = Math.Min(stats.Min, point);
                             stats.Max = Math.Max(stats.Max, point);
                             stats.Average += point;
@@ -537,19 +297,19 @@
         {
             {
                 Statistics stats = new Statistics();
-                stats.Min = float.MaxValue;
-                stats.Max = float.MinValue;
+                stats.Min = int.MaxValue;
+                stats.Max = int.MinValue;
                 stats.Average = 0;
-                if (File.Exists(fileName4))
+                if (File.Exists(gradesIT))
                 {
-                    using (var reader = File.OpenText(fileName4))
+                    using (var reader = File.OpenText(gradesIT))
                     {
                         int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
                             i++;
-                            float point = float.Parse(line);
+                            int point = int.Parse(line);
                             stats.Min = Math.Min(stats.Min, point);
                             stats.Max = Math.Max(stats.Max, point);
                             stats.Average += point;
@@ -580,19 +340,19 @@
         {
             {
                 Statistics stats = new Statistics();
-                stats.Min = float.MaxValue;
-                stats.Max = float.MinValue;
+                stats.Min = int.MaxValue;
+                stats.Max = int.MinValue;
                 stats.Average = 0;
-                if (File.Exists(fileName5))
+                if (File.Exists(gradesPhysics))
                 {
-                    using (var reader = File.OpenText(fileName5))
+                    using (var reader = File.OpenText(gradesPhysics))
                     {
                         int i = 0;
                         var line = reader.ReadLine();
                         while (line != null)
                         {
                             i++;
-                            float point = float.Parse(line);
+                            int point = int.Parse(line);
                             stats.Min = Math.Min(stats.Min, point);
                             stats.Max = Math.Max(stats.Max, point);
                             stats.Average += point;
