@@ -79,14 +79,9 @@
 
             foreach (var grade in this.gradesMath)
             {
-                statisticsMath.Average += grade;
                 statisticsMath.Add(grade);
             }
-
-            statisticsMath.Average = statisticsMath.Average / this.gradesMath.Count;
-
-
-            return statisticsMath;
+        return statisticsMath;
         }
         public override Statistics GetStatisticsPolish()
         {
@@ -95,15 +90,8 @@
             foreach (var grade in this.gradesPolish)
             {
                 statisticsPolish.Add(grade);
-                statisticsPolish.Average += grade;
             }
-
-            statisticsPolish.Average = statisticsPolish.Average / this.gradesPolish.Count;
-
-
-
-            return statisticsPolish;
-
+        return statisticsPolish;
         }
         public override Statistics GetStatisticsEnglish()
         {
@@ -112,14 +100,8 @@
             foreach (var grade in this.gradesEnglish)
             {
                 statisticsEnglish.Add(grade);
-                statisticsEnglish.Average += grade;
-
             }
-
-            statisticsEnglish.Average = statisticsEnglish.Average / this.gradesEnglish.Count;
-
-            return statisticsEnglish;
-
+        return statisticsEnglish;
         }
         public override Statistics GetStatisticsIT()
         {
@@ -128,14 +110,8 @@
             foreach (var grade in this.gradesIT)
             {
                 statisticsIT.Add(grade);
-                statisticsIT.Average += grade;
-
             }
-
-            statisticsIT.Average = statisticsIT.Average / this.gradesIT.Count;
-
-            return statisticsIT;
-
+        return statisticsIT;
         }
         public override Statistics GetStatisticsPhysics()
         {
@@ -144,14 +120,8 @@
             foreach (var grade in this.gradesPhysics)
             {
                 statisticsPhysics.Add(grade);
-                statisticsPhysics.Average += grade;
-
             }
-
-            statisticsPhysics.Average = statisticsPhysics.Average / this.gradesPhysics.Count;
-
-            return statisticsPhysics;
-
+        return statisticsPhysics;
         }
     }
 }

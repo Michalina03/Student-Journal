@@ -97,12 +97,13 @@
                     using (var reader = File.OpenText($"{gradesMath}"))
                     {
                         var line = reader.ReadLine();
-                        while (line != null)
-                        {
-                            var grade = float.Parse(line);
-                            result.Add(grade);
-                            line = reader.ReadLine();
-                        }
+                        
+                            while (line != null)
+                            {
+                                var grade = float.Parse(line);
+                                result.Add(grade);
+                                line = reader.ReadLine();
+                            }
                     }
                 }
                 return result;
